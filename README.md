@@ -46,7 +46,7 @@ dependencies {
         app:setStepSize="0.5" />
 
 ```
-```
+```xml
  <com.ashokslsk.androidabcd.squarerating.SquareRatingView
         android:id="@+id/square"
         android:layout_width="wrap_content"
