@@ -64,6 +64,8 @@ Use the following values for customising the rating tiles and stepsizes.
         app:setNumSquare="8"
         app:setRating="0"
         app:setStepSize="0.5"
+        app:setSelectedResource="@mipmap/ic_launcher"
+        app:setUnSelectedResource="@mipmap/ic_launcher_round"
 
 # JAVA Controls
 
