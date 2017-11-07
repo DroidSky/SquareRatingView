@@ -2,6 +2,8 @@
 
 We have seen RatingBar and it's support component AppCompatRatingBar but the problem is its difficult to customise. This library helps in customising SquareRatingView with number Rate items and so on. 
 
+[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-SquareRatingView-green.svg?style=flat )]( https://android-arsenal.com/details/1/6420 )
+
 ![Library screen](https://github.com/ashokslsk/SquareRatingView/blob/master/screens/Animated.gif)
 
 
