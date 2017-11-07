@@ -1,1 +1,1 @@
-include ':app', ':SqaureRatingView'
+include ':app', ':SquareRateView'

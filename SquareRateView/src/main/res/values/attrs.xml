@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SquareRating">
+        <attr name="setMax" format="integer" />
+        <attr name="setNumSquare" format="integer" />
+        <attr name="setStepSize" format="float" />
+        <attr name="setRating" format="float" />
+    </declare-styleable>
+</resources>

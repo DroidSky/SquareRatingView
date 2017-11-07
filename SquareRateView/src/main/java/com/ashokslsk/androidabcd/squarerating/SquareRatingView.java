@@ -1,6 +1,7 @@
 package com.ashokslsk.androidabcd.squarerating;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -11,60 +12,59 @@ import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.widget.AppCompatRatingBar;
 import android.util.AttributeSet;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by ashok.kumar on 07/11/17.
  */
 
 public class SquareRatingView extends AppCompatRatingBar {
 
+    private List<Integer> inActive = new ArrayList<>();
+    private List<Integer> Active = new ArrayList<>();
 
-    private int[] iconArrayActive =  {
-            R.drawable.ic_square_sel,
-            R.drawable.ic_square_sel,
-            R.drawable.ic_square_sel,
-            R.drawable.ic_square_sel,
-            R.drawable.ic_square_sel,
-            R.drawable.ic_square_sel,
-            R.drawable.ic_square_sel,
-            R.drawable.ic_square_sel,
-            R.drawable.ic_square_sel,
-            R.drawable.ic_square_sel
-
-    };
-
-    private int[] iconArrayInactive =  {
-            R.drawable.ic_square_unsel,
-            R.drawable.ic_square_unsel,
-            R.drawable.ic_square_unsel,
-            R.drawable.ic_square_unsel,
-            R.drawable.ic_square_unsel,
-            R.drawable.ic_square_unsel,
-            R.drawable.ic_square_unsel,
-            R.drawable.ic_square_unsel,
-            R.drawable.ic_square_unsel,
-            R.drawable.ic_square_unsel
-    };
 
     public SquareRatingView(Context context) {
         super(context);
-        init();
+        init(context,null);
     }
 
     public SquareRatingView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init();
+        init(context,attrs);
     }
 
     public SquareRatingView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init();
+        init(context,attrs);
     }
 
-    private void init() {
-        this.setMax(10);
-        this.setNumStars(10);
-        this.setStepSize(1.0f);
-        this.setRating(1.0f);
+    private void init(Context context, AttributeSet attrs) {
+        TypedArray ratevalue=getContext().obtainStyledAttributes(
+                attrs,
+                R.styleable.SquareRating);
+
+        int max = ratevalue.getInteger(R.styleable.SquareRating_setMax, 5);
+        int NumStars = ratevalue.getInteger(R.styleable.SquareRating_setNumSquare, 5);
+        Float Stepsize = ratevalue.getFloat(R.styleable.SquareRating_setStepSize, 0.5f);
+        Float Rating = ratevalue.getFloat(R.styleable.SquareRating_setRating, 0.0f);
+
+        if(max > 10 || NumStars > 10){
+            for (int i = 0; i <NumStars ; i++) {
+                Active.add(R.drawable.ic_square_sel);
+                inActive.add(R.drawable.ic_square_unsel);
+            }
+        }else{
+
+        }
+
+        this.setMax(max);
+        this.setNumStars(NumStars);
+        this.setStepSize(Stepsize);
+        this.setRating(Rating);
+
+        ratevalue.recycle();
     }
 
     private Bitmap getBitmapFromVectorDrawable(Context context, int drawableId) {
@@ -102,9 +102,9 @@ public class SquareRatingView extends AppCompatRatingBar {
 
         for(int i = 0; i < stars; i++) {
             if ((int) rating-1 >= i) {
-                bitmap = getBitmapFromVectorDrawable(getContext(), iconArrayActive[i]);
+                bitmap = getBitmapFromVectorDrawable(getContext(), Active.get(i));
             } else {
-                bitmap = getBitmapFromVectorDrawable(getContext(), iconArrayInactive[i]);
+                bitmap = getBitmapFromVectorDrawable(getContext(), inActive.get(i));
             }
             x = offset+(i*delta);
             Bitmap scaled = Bitmap.createScaledBitmap(bitmap, icon_size, icon_size, true);
