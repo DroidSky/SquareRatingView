@@ -25,6 +25,12 @@ dependencies {
 	        compile 'com.github.ashokslsk:SquareRatingView:1.1'
 	}
 
+
+// Latest update with support to setting drawables as selected and unslected states.
+
+dependencies {
+	        compile 'com.github.ashokslsk:SquareRatingView:1.2'
+	}
 ```
 
 # XML VIEW
@@ -40,12 +46,26 @@ dependencies {
         app:setStepSize="0.5" />
 
 ```
+```xml
+ <com.ashokslsk.androidabcd.squarerating.SquareRatingView
+        android:id="@+id/square"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:setNumSquare="8"
+        app:setRating="0"
+        app:setSelectedResource="@mipmap/ic_launcher"
+        app:setUnSelectedResource="@mipmap/ic_launcher_round"
+        app:setStepSize="0.5" />
+
+```
 
 Use the following values for customising the rating tiles and stepsizes. 
 
         app:setNumSquare="8"
         app:setRating="0"
         app:setStepSize="0.5"
+        app:setSelectedResource="@mipmap/ic_launcher"
+        app:setUnSelectedResource="@mipmap/ic_launcher_round"
 
 # JAVA Controls
 
