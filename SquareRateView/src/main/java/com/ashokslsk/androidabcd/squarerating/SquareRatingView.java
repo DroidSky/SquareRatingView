@@ -49,10 +49,12 @@ public class SquareRatingView extends AppCompatRatingBar {
         int NumStars = ratevalue.getInteger(R.styleable.SquareRating_setNumSquare, 5);
         Float Stepsize = ratevalue.getFloat(R.styleable.SquareRating_setStepSize, 0.5f);
         Float Rating = ratevalue.getFloat(R.styleable.SquareRating_setRating, 0.0f);
+        int Selected = ratevalue.getResourceId(R.styleable.SquareRating_setSelectedResource, R.drawable.ic_square_sel);
+        int UnSelected = ratevalue.getResourceId(R.styleable.SquareRating_setUnSelectedResource, R.drawable.ic_square_unsel);
 
             for (int i = 0; i <NumStars ; i++) {
-                Active.add(R.drawable.ic_square_sel);
-                inActive.add(R.drawable.ic_square_unsel);
+                Active.add(Selected);
+                inActive.add(UnSelected);
             }
 
 

@@ -5,5 +5,7 @@
         <attr name="setNumSquare" format="integer" />
         <attr name="setStepSize" format="float" />
         <attr name="setRating" format="float" />
+        <attr name="setSelectedResource" format="reference" />
+        <attr name="setUnSelectedResource" format="reference" />
     </declare-styleable>
 </resources>

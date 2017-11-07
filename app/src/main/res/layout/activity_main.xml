@@ -12,6 +12,8 @@
         android:layout_height="wrap_content"
         app:setNumSquare="8"
         app:setRating="0"
+        app:setSelectedResource="@mipmap/ic_launcher"
+        app:setUnSelectedResource="@mipmap/ic_launcher_round"
         app:setStepSize="0.5" />
 
 </RelativeLayout>
