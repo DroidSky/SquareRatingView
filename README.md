@@ -20,7 +20,7 @@ allprojects {
 }
 
 dependencies {
-	        compile 'com.github.ashokslsk:SquareRatingView:SquareRateView'
+	        compile 'com.github.ashokslsk:SquareRatingView:1.1'
 	}
 
 ```
