@@ -6,12 +6,12 @@
     android:layout_height="match_parent"
     tools:context="com.androidabcd.ashokslsk.squareratingview.MainActivity">
 
-        <com.ashokslsk.androidabcd.squarerating.SquareRatingView
+    <com.ashokslsk.androidabcd.squarerating.SquareRatingView
         android:id="@+id/square"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:setNumSquare="8"
         app:setRating="0"
-        app:setStepSize="0.5"/>
+        app:setStepSize="0.5" />
 
 </RelativeLayout>

@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
 
                 Toast.makeText(MainActivity.this, ratingBar.getRating()+"", Toast.LENGTH_SHORT).show();
 
-
             }
         });
 
