@@ -1,13 +1,25 @@
-# **SquareRatingView**
-
-We have seen RatingBar and it's support component AppCompatRatingBar but the problem is its difficult to customise. This library helps in customising SquareRatingView with number Rate items and so on. 
-
 [![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-SquareRatingView-green.svg?style=flat )]( https://android-arsenal.com/details/1/6420 )
 
-![Library screen](https://github.com/ashokslsk/SquareRatingView/blob/master/screens/Animated.gif)
+
+<a href='https://ko-fi.com/A116514N' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 
-# Installation
+
+# SquareRatingView
+
+**SquareRatingView** is a Custom RatingBar component that allows you to customise your rating view with any image or by default with green and grey tiles. RatingBar by default is a star icon and is little tricky while changing the icon to any other icon. SquareRatingView is here to solve the problem. 
+
+
+Example I |      Example II
+-------- | ---
+![Library screen](https://github.com/ashokslsk/SquareRatingView/blob/master/screens/Animated.gif)|![Library screen](https://github.com/ashokslsk/SquareRatingView/blob/master/screens/Redico.gif)
+  
+
+
+How to use
+----------
+
+#Installation
 
 ```gradle
 
@@ -22,18 +34,11 @@ allprojects {
 }
 
 dependencies {
-	        compile 'com.github.ashokslsk:SquareRatingView:1.1'
-	}
-
-
-// Latest update with support to setting drawables as selected and unslected states.
-
-dependencies {
 	        compile 'com.github.ashokslsk:SquareRatingView:1.2'
 	}
 ```
 
-# XML VIEW
+## In your xml add the following code to see the default square rating view
 
 ```xml
  
@@ -46,6 +51,10 @@ dependencies {
         app:setStepSize="0.5" />
 
 ```
+
+
+## In your xml add the following square rating view for drawable image
+
 ```xml
  <com.ashokslsk.androidabcd.squarerating.SquareRatingView
         android:id="@+id/square"
@@ -53,13 +62,13 @@ dependencies {
         android:layout_height="wrap_content"
         app:setNumSquare="8"
         app:setRating="0"
-        app:setSelectedResource="@mipmap/ic_launcher"
-        app:setUnSelectedResource="@mipmap/ic_launcher_round"
+        app:setSelectedResource="@mipmap/ic_launcher"        // Your selected drawable resource
+        app:setUnSelectedResource="@mipmap/ic_launcher_round" // Your unselected drawable resource
         app:setStepSize="0.5" />
 
 ```
 
-Use the following values for customising the rating tiles and stepsizes. 
+## Use the following values for customising the rating tiles and stepsizes. 
 
         app:setNumSquare="8"
         app:setRating="0"
