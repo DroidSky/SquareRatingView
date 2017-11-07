@@ -50,14 +50,11 @@ public class SquareRatingView extends AppCompatRatingBar {
         Float Stepsize = ratevalue.getFloat(R.styleable.SquareRating_setStepSize, 0.5f);
         Float Rating = ratevalue.getFloat(R.styleable.SquareRating_setRating, 0.0f);
 
-        if(max > 10 || NumStars > 10){
             for (int i = 0; i <NumStars ; i++) {
                 Active.add(R.drawable.ic_square_sel);
                 inActive.add(R.drawable.ic_square_unsel);
             }
-        }else{
 
-        }
 
         this.setMax(max);
         this.setNumStars(NumStars);
