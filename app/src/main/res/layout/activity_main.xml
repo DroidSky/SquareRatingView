@@ -12,8 +12,8 @@
         android:layout_height="wrap_content"
         app:setNumSquare="8"
         app:setRating="0"
-        app:setSelectedResource="@mipmap/ic_launcher"
-        app:setUnSelectedResource="@mipmap/ic_launcher_round"
+        app:setSelectedResource="@drawable/ico_red_selected"
+        app:setUnSelectedResource="@drawable/ic_square_unsel"
         app:setStepSize="0.5" />
 
 </RelativeLayout>
